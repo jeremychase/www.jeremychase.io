@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
+import Types from './Types';
+
 class App extends Component {
   render() {
     return (
-      <div >
+      <React.Fragment>
         <header>
-          <p>hello, world< /p>
+          <p>hello, world</p>
         </header>
-      </div>
+        <Types />
+      </React.Fragment>
     );
   }
 }

@@ -1,7 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { render } from 'react-dom';
+
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import 'typeface-roboto';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './App';
+
+const theme = createMuiTheme();
+
+function MyApp() {
+    return (
+          <MuiThemeProvider theme={theme}>
+            <CssBaseline />
+            <App />
+          </MuiThemeProvider>
+        );
+}
+
+render(<MyApp />, document.querySelector('#react-app'));
