@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Types from './Types';
 
-class App extends Component {
+class Root extends Component {
   render() {
     return (
       <React.Fragment>
@@ -15,4 +15,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Root;

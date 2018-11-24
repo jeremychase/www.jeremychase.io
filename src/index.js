@@ -5,17 +5,17 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import 'typeface-roboto';
 
-import App from './App';
+import Root from './Root';
 
 const theme = createMuiTheme();
 
-function MyApp() {
+function App() {
     return (
           <MuiThemeProvider theme={theme}>
             <CssBaseline />
-            <App />
+            <Root />
           </MuiThemeProvider>
         );
 }
 
-render(<MyApp />, document.querySelector('#react-app'));
+render(<App />, document.querySelector('#react-app'));
