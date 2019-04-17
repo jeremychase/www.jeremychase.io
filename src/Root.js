@@ -20,6 +20,12 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 4
   },
   root: {},
+  splitter: {
+    height: "60vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
+  },
   waves: {
     minHeight: "100vh"
   },
@@ -56,7 +62,7 @@ class Root extends Component {
           <div className={classes.topAccent} />
           <AppBar className={classes.appbar} position="sticky" />
 
-          <Grid item xs={12}>
+          <div className={classes.splitter}>
             <div className={classes.heroUnit}>
               <div className={classes.heroContent}>
                 <Typography
@@ -118,7 +124,7 @@ class Root extends Component {
                 </div>
               </div>
             </div>
-          </Grid>
+          </div>
         </div>
       </div>
     );
