@@ -86,7 +86,7 @@ class Root extends Component {
                   <Grid container spacing={16} justify="center">
                     <Grid item>
                       <Button
-                        variant="contained"
+                        variant="outlined"
                         href="https://github.com/JeremyChase"
                         color="secondary"
                       >
@@ -95,7 +95,7 @@ class Root extends Component {
                     </Grid>
                     <Grid item>
                       <Button
-                        variant="contained"
+                        variant="outlined"
                         href="https://www.lamp.io/"
                         color="secondary"
                       >
@@ -104,7 +104,7 @@ class Root extends Component {
                     </Grid>
                     <Grid item>
                       <Button
-                        variant="contained"
+                        variant="outlined"
                         href="https://www.linkedin.com/in/jeremychase/"
                         color="secondary"
                       >

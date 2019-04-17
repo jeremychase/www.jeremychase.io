@@ -10,7 +10,7 @@ import Root from "./Root";
 const theme = createMuiTheme({
   palette: {
     primary: { main: "#000640" },
-    secondary: { main: "#264000" },
+    secondary: { main: "#31C60B" },
     type: "dark"
   }
 });
