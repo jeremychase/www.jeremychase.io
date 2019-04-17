@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import AppBar from "@material-ui/core/AppBar";
+import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -11,8 +11,13 @@ const styles = theme => ({
   appbar: {
     height: "24px"
   },
-  paper: {
-    padding: theme.spacing.unit * 4
+  heroContent: {
+    maxWidth: 600,
+    margin: "0 auto",
+    padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`
+  },
+  heroButtons: {
+    marginTop: theme.spacing.unit * 4
   },
   root: {},
   waves: {
@@ -26,10 +31,18 @@ const styles = theme => ({
 
 class Root extends Component {
   componentDidMount() {
+    const { theme } = this.props;
+
     this.effect = window.VANTA.WAVES({
-      el: "#waves"
+      el: "#waves",
+      color: theme.palette.primary.dark,
+      shininess: 61.0,
+      waveHeight: 40.0,
+      waveSpeed: 0.65,
+      zoom: 0.65
     });
   }
+
   componentWillUnmount() {
     if (this.effect) this.effect.destroy();
   }
@@ -44,17 +57,67 @@ class Root extends Component {
           <AppBar className={classes.appbar} position="sticky" />
 
           <Grid item xs={12}>
-            <Paper className={classes.paper}>
-              <Typography variant="h3" gutterBottom>
-                Heading
-              </Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                blanditiis tenetur unde suscipit, quam beatae rerum inventore
-                consectetur, neque doloribus, cupiditate numquam dignissimos
-                laborum fugiat deleniti? Eum quasi quidem quibusdam.
-              </Typography>
-            </Paper>
+            <div className={classes.heroUnit}>
+              <div className={classes.heroContent}>
+                <Typography
+                  component="h1"
+                  variant="h1"
+                  align="center"
+                  color="text"
+                  gutterBottom
+                >
+                  Jeremy Chase
+                </Typography>
+                <Typography
+                  variant="h6"
+                  align="center"
+                  color="textSecondary"
+                  paragraph
+                >
+                  developer of software and fanfare
+                </Typography>
+                <div className={classes.heroButtons}>
+                  <Grid container spacing={16} justify="center">
+                    <Grid item>
+                      <Button
+                        variant="contained"
+                        href="https://github.com/JeremyChase"
+                        color="secondary"
+                      >
+                        github
+                      </Button>
+                    </Grid>
+                    <Grid item>
+                      <Button
+                        variant="contained"
+                        href="https://www.lamp.io/"
+                        color="secondary"
+                      >
+                        lamp.io
+                      </Button>
+                    </Grid>
+                    <Grid item>
+                      <Button
+                        variant="contained"
+                        href="https://www.linkedin.com/in/jeremychase/"
+                        color="secondary"
+                      >
+                        linkedin
+                      </Button>
+                    </Grid>
+                    <Grid item>
+                      <Button
+                        variant="outlined"
+                        href="mailto:jeremychase@gmail.com"
+                        color="secondary"
+                      >
+                        email
+                      </Button>
+                    </Grid>
+                  </Grid>
+                </div>
+              </div>
+            </div>
           </Grid>
         </div>
       </div>
