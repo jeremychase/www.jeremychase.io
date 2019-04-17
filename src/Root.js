@@ -11,13 +11,12 @@ const styles = theme => ({
   appbar: {
     height: "24px"
   },
-  content: {},
   paper: {
-    margin: theme.spacing.unit * 4,
     padding: theme.spacing.unit * 4
   },
-  root: {
-    flexGrow: 1
+  root: {},
+  waves: {
+    minHeight: "100vh"
   },
   topAccent: {
     height: "6px",
@@ -26,15 +25,24 @@ const styles = theme => ({
 });
 
 class Root extends Component {
+  componentDidMount() {
+    this.effect = window.VANTA.WAVES({
+      el: "#waves"
+    });
+  }
+  componentWillUnmount() {
+    if (this.effect) this.effect.destroy();
+  }
+
   render() {
     const { classes } = this.props;
 
     return (
       <div className={classes.root}>
-        <div className={classes.topAccent} />
-        <AppBar className={classes.appbar} position="sticky" />
+        <div id="waves" className={classes.waves}>
+          <div className={classes.topAccent} />
+          <AppBar className={classes.appbar} position="sticky" />
 
-        <Grid container spacing={24}>
           <Grid item xs={12}>
             <Paper className={classes.paper}>
               <Typography variant="h3" gutterBottom>
@@ -48,7 +56,7 @@ class Root extends Component {
               </Typography>
             </Paper>
           </Grid>
-        </Grid>
+        </div>
       </div>
     );
   }
