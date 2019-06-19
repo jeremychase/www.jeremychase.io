@@ -25,3 +25,5 @@ function App() {
 }
 
 render(<App />, document.querySelector("#react-app"));
+
+// ignore noop
