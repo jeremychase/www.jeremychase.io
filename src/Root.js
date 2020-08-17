@@ -114,7 +114,7 @@ class Root extends Component {
                     <Grid item>
                       <Button
                         variant="outlined"
-                        href="mailto:jeremychase@gmail.com"
+                        href="mailto:jeremy.chase@gmail.com"
                         color="secondary"
                       >
                         email
