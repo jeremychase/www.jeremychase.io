@@ -83,7 +83,7 @@ class Root extends Component {
                   Software and Cloud Architect
                 </Typography>
                 <div className={classes.heroButtons}>
-                  <Grid container spacing={16} justify="center">
+                  <Grid container spacing={3} justify="center">
                     <Grid item>
                       <Button
                         variant="outlined"
@@ -96,19 +96,10 @@ class Root extends Component {
                     <Grid item>
                       <Button
                         variant="outlined"
-                        href="https://www.lamp.io/"
-                        color="secondary"
-                      >
-                        lamp.io
-                      </Button>
-                    </Grid>
-                    <Grid item>
-                      <Button
-                        variant="outlined"
                         href="https://www.linkedin.com/in/jeremychase/"
                         color="secondary"
                       >
-                        linkedin
+                        LinkedIn
                       </Button>
                     </Grid>
                     <Grid item>
