@@ -36,6 +36,7 @@ const styles = theme => ({
 
 class Root extends Component {
   componentDidMount() {
+    console.log("Hello; how are you today?")
     const { theme } = this.props;
 
     this.effect = window.VANTA.WAVES({
