@@ -7,6 +7,9 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
+import WAVES from 'vanta/dist/vanta.waves.min'
+import * as THREE from 'three'
+
 const styles = theme => ({
   appbar: {
     height: "24px"
@@ -39,13 +42,14 @@ class Root extends Component {
     console.log("Hello; how are you today?")
     const { theme } = this.props;
 
-    this.effect = window.VANTA.WAVES({
+    this.effect = WAVES({
       el: "#waves",
       color: theme.palette.primary.dark,
       shininess: 61.0,
       waveHeight: 40.0,
       waveSpeed: 0.65,
-      zoom: 0.65
+      zoom: 0.65,
+      THREE: THREE
     });
   }
 
