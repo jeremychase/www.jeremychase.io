@@ -84,7 +84,7 @@ class Root extends Component {
                   color="textSecondary"
                   paragraph
                 >
-                  Software and Cloud Architect
+                  Real Human Person
                 </Typography>
                 <div className={classes.heroButtons}>
                   <Grid container spacing={3} justify="center">
